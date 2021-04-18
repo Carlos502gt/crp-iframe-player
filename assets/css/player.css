@@ -58,7 +58,7 @@ video {
 }
 
 .loading_icon {
-	height: 200px;
+	height: 0px;
 	width: 200px;
 	margin-right: 20px;
 	flex: 0 0 auto;
