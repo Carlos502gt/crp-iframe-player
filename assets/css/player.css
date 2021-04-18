@@ -58,8 +58,8 @@ video {
 }
 
 .loading_icon {
-        height: 200px;
-        witth: 200px;
+        height: 30px;
+        witth: 30px;
 	margin-right: 20px;
 	flex: 0 0 auto;
 	-webkit-flex: 0 0 auto;
