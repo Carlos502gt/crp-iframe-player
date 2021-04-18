@@ -37,9 +37,9 @@ video {
 
 .loading_container {
 	background-color: #000;
-	border-radius: 100px;
-	-webkit-border-radius: 100px;
-	-moz-border-radius: 100px;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
 	display: flex;
 	flex-direction: row;
 	-webkit-flex-direction: row;
@@ -47,8 +47,8 @@ video {
 	align-items: stretch;
 	-webkit-align-items: stretch;
 	padding: 100px;
-	top: 50%;
-	left: 50%;
+	top: 100%;
+	left: 100%;
 	position: absolute;
 	transform: translate(-50%, -50%);
 	-webkit-transform: translate(-50%, -50%);
