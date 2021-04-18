@@ -46,9 +46,9 @@ video {
 	-moz-flex-direction: row;
 	align-items: stretch;
 	-webkit-align-items: stretch;
-	padding: 100px;
-	top: 100%;
-	left: 100%;
+	padding: 150px;
+	top: 50%;
+	left: 50%;
 	position: absolute;
 	transform: translate(-50%, -50%);
 	-webkit-transform: translate(-50%, -50%);
