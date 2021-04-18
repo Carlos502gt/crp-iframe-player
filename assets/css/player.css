@@ -60,7 +60,7 @@ video {
 .loading_icon {
 	height: 30px;
 	width: 30px;
-	margin-right: 100px;
+	margin-right: 0px;
 	flex: 0 0 auto;
 	-webkit-flex: 0 0 auto;
 	-ms-flex: 0 0 auto;
