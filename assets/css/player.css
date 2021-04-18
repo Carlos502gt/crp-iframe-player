@@ -46,7 +46,7 @@ video {
 	-moz-flex-direction: row;
 	align-items: stretch;
 	-webkit-align-items: stretch;
-	padding: 100px;
+	padding: 20px;
 	top: 50%;
 	left: 50%;
 	position: absolute;
@@ -58,8 +58,8 @@ video {
 }
 
 .loading_icon {
-        height: 200px;
-        width: 200px;
+        height: 30px;
+        width: 30px;
 	margin-right: 20px;
 	flex: 0 0 auto;
 	-webkit-flex: 0 0 auto;
