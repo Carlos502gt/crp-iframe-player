@@ -16,7 +16,7 @@
 }
 
 .modal::-webkit-scrollbar {
-    width: 8px!important;
+    width: 1px!important;
 }
 .modal::-webkit-scrollbar-thumb {
     background: #888!important;
@@ -49,8 +49,8 @@
     position: absolute;
     font-size: 25px;
     cursor: pointer;
-    right: 0px;
-    top: 0px;
+    right: none;
+    top: none;
     color: #eee;
     outline: none;
 }
