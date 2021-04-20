@@ -44,10 +44,10 @@
     transform: translate3d(0, -900%, 0);
 }
 .close-modal {
-	background: #a7a7a8!important;
+	background: none;
     border: none;
     position: absolute;
-    font-size: 25px;
+    font-size: 30px;
     cursor: pointer;
     right: none;
     top: none;
