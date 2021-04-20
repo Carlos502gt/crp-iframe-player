@@ -43,3 +43,14 @@
     -webkit-transform: translate3d(0, -900%, 0);
     transform: translate3d(0, -900%, 0);
 }
+.download-item {
+	display: table;
+    vertical-align: middle;
+    height: 55px;
+    width: 100%;
+}
+.partdditem {
+    display: table-cell;
+    vertical-align: middle;
+    margin: 6%;
+}
