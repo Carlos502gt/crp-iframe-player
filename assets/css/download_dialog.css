@@ -37,7 +37,7 @@
     right: 0;
     border-radius: 3px;
     margin: auto;
-    padding: 20px;
+    padding: 200px;
     -webkit-filter: url(#blur);
     filter: url(#blur);
     -webkit-transform: translate3d(0, -900%, 0);
@@ -47,7 +47,7 @@
 	background: none;
     border: none;
     position: absolute;
-    font-size: 50px;
+    font-size: 35px;
     cursor: pointer;
     right: 10px;
     top: 10px;
