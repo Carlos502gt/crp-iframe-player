@@ -49,8 +49,8 @@
     position: absolute;
     font-size: 30px;
     cursor: pointer;
-    right: 1%;
-    top: 1%;
+    right: 0px;
+    top: 0px;
     color: #eee;
     outline: none;
 }
