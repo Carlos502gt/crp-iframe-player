@@ -27,8 +27,8 @@
 .modal {
     background: #3f3f3f;
     text-align: center;
-    width: 230px;
-    height: 270px;
+    width: 300px;
+    height: 300px;
     z-index: 2147483647;
     position: absolute;
     top: 0;
@@ -37,7 +37,7 @@
     right: 0;
     border-radius: 3px;
     margin: auto;
-    padding: 5px;
+    padding: 20px;
     -webkit-filter: url(#blur);
     filter: url(#blur);
     -webkit-transform: translate3d(0, -900%, 0);
@@ -49,8 +49,8 @@
     position: absolute;
     font-size: 20px;
     cursor: pointer;
-    right: 20px;
-    top: 20px;
+    right: 10px;
+    top: 10px;
     color: #eee;
     outline: none;
 }
