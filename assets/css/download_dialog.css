@@ -16,7 +16,7 @@
 }
 
 .modal::-webkit-scrollbar {
-    width: 200px!important;
+    width: 20px!important;
 }
 .modal::-webkit-scrollbar-thumb {
     background: #888!important;
