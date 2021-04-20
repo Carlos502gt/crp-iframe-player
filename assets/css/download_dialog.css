@@ -43,17 +43,6 @@
     -webkit-transform: translate3d(0, -900%, 0);
     transform: translate3d(0, -900%, 0);
 }
-.close-modal {
-	background: none;
-    border: none;
-    position: absolute;
-    font-size: 30px;
-    cursor: pointer;
-    right: 10px;
-    top: 10px;
-    color: #eee;
-    outline: none;
-}
 .download-item {
 	display: table;
     vertical-align: middle;
