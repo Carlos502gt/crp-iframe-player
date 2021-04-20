@@ -54,3 +54,17 @@
     vertical-align: middle;
     margin: 6%;
 }
+.quality {
+    color: #eee;
+    font-family: SFProDisplay-Semibold;
+    font-size: 15px;
+    width: 13%;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.quality > sup {
+    font-family: 'Roboto', sans-serif;
+    color: rgb(244, 117, 33);
+    font-size: 10px;
+}
