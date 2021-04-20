@@ -47,10 +47,10 @@
 	background: #a7a7a8!important;
     border: none;
     position: absolute;
-    font-size: 20px;
+    font-size: 25px;
     cursor: pointer;
-    right: 5px;
-    top: 5px;
+    right: 0px;
+    top: 0px;
     color: #eee;
     outline: none;
 }
