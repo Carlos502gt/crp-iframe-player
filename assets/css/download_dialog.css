@@ -49,6 +49,8 @@
     position: absolute;
     font-size: 20px;
     cursor: pointer;
+    right: 0px;
+    top: 0px;
     color: #eee;
     outline: none;
 }
@@ -113,7 +115,7 @@
     -webkit-filter: invert(98%) sepia(1%) saturate(99%) hue-rotate(314deg) brightness(117%) contrast(87%);
     filter: invert(98%) sepia(1%) saturate(99%) hue-rotate(314deg) brightness(117%) contrast(87%);
 	cursor: pointer;
-    width: 12%;
+    width: 20%;
     background-position: center;
     background-repeat: no-repeat;
 }
