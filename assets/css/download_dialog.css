@@ -35,7 +35,7 @@
     left: 0;
     bottom: 0;
     right: 0;
-    border-radius: 3px;
+    border-radius: 0px;
     margin: auto;
     padding: 50px;
     -webkit-filter: url(#blur);
@@ -47,7 +47,7 @@
 	background: none;
     border: none;
     position: absolute;
-    font-size: 30px;
+    font-size: 20px;
     cursor: pointer;
     right: 0px;
     top: 0px;
