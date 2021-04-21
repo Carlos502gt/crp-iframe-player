@@ -15,17 +15,8 @@
     url("../../assets/font/SFProDisplay-Semibold.svg#SFProDisplay-Semibold") format("svg"); /* iOS 4.1- */
 }
 
-.modal::-webkit-scrollbar {
-    width: 8px!important;
-}
-.modal::-webkit-scrollbar-thumb {
-    background: #888!important;
-}
-.modal::-webkit-scrollbar-track {
-    background: #a7a7a7!important;
-}
 .modal {
-    background: #3f3f3f;
+    background: #FFFFFFFF;
     text-align: center;
     width: 230px;
     height: 270px;
@@ -37,7 +28,7 @@
     right: 0;
     border-radius: 0px;
     margin: auto;
-    padding: 5px;
+    padding: 20px;
     -webkit-filter: url(#blur);
     filter: url(#blur);
     -webkit-transform: translate3d(0, -900%, 0);
