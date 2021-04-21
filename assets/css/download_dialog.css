@@ -24,24 +24,17 @@
 .modal::-webkit-scrollbar-track {
     background: #a7a7a7!important;
 }
-.modal {
-    background: #3f3f3f;
-    text-align: center;
-    width: 230px;
-    height: 270px;
-    z-index: 2147483647;
+
+.close-modal {
+	background: none;
+    border: none;
     position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    border-radius: 0;
-    margin: auto;
-    padding: 30px;
-    -webkit-filter: url(#blur);
-    filter: url(#blur);
-    -webkit-transform: translate3d(0, -900%, 0);
-    transform: translate3d(0, -900%, 0);
+    font-size: 20px;
+    cursor: pointer;
+    right: 10px;
+    top: 10px;
+    color: #eee;
+    outline: none;
 }
 .download-item {
 	display: table;
@@ -54,6 +47,32 @@
     vertical-align: middle;
     margin: 6%;
 }
+.not-copyable {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.size {
+    color: #eee;
+    font-family: SFProDisplay-Regular;
+    font-size: 15px;
+    text-align: left;
+    width: 14%;
+    opacity: .7;
+}
+
+.size > img {
+    position: relative;
+    top: 4px;
+    min-width: 15px;
+    width: 15px;
+    max-width: 15px;
+}
+
 .quality {
     color: #eee;
     font-family: SFProDisplay-Semibold;
