@@ -30,13 +30,13 @@
     width: 230px;
     height: 270px;
     z-index: 2147483647;
-    position: absolute;
+    position: 50px;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
     border-radius: 3px;
-    margin: 50px;
+    margin: auto;
     padding: 35px;
     -webkit-filter: url(#blur);
     filter: url(#blur);
