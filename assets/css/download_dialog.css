@@ -77,9 +77,9 @@
 .size > img {
     position: relative;
     top: 4px;
-    min-width: 15px;
-    width: 15px;
-    max-width: 15px;
+    min-width: 30px;
+    width: 30px;
+    max-width: 30px;
 }
 
 .quality {
@@ -106,7 +106,7 @@
     -webkit-filter: invert(98%) sepia(1%) saturate(99%) hue-rotate(314deg) brightness(117%) contrast(87%);
     filter: invert(98%) sepia(1%) saturate(99%) hue-rotate(314deg) brightness(117%) contrast(87%);
 	cursor: pointer;
-    width: 5%;
+    width: 12%;
     background-position: center;
     background-repeat: no-repeat;
 }
