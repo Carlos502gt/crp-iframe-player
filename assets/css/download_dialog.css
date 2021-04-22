@@ -63,7 +63,7 @@
 .partdditem {
     display: table-cell;
     vertical-align: middle;
-    margin: 6%;
+    margin: 0;
 }
 .not-copyable {
 	-webkit-touch-callout: none;
