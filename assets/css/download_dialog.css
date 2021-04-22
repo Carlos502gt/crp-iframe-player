@@ -36,7 +36,7 @@
     bottom: 0;
     right: 0;
     border-radius: 3px;
-    margin: 100px;
+    margin: 0px;
     padding: 35px;
     -webkit-filter: url(#blur);
     filter: url(#blur);
