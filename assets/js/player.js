@@ -95,7 +95,7 @@ window.addEventListener("message", async e => {
 			if (http.readyState == 4 && http.status == 200) {
 				fileSize = http.getResponseHeader('content-length');
 				if (!fileSize)
-					return setTimeout(() => linkDownload(id), 1000);
+					return setTimeout(() => linkDownload(id), 5000);
 				else {
 					let sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB'];
 					if (fileSize == 0) return console.log('addSource#fileSize == 0');
@@ -106,7 +106,7 @@ window.addEventListener("message", async e => {
 					return console.log(`[CR Premium] Source adicionado: ${r[id]} (${return_fileSize})`);
 				}
 			} else if (http.readyState == 4)
-				return setTimeout(() => linkDownload(id), 1000);
+				return setTimeout(() => linkDownload(id), 5000);
 		}
 		http.open("HEAD", video_mp4_url, true);
 		http.send(null);
@@ -295,7 +295,7 @@ window.addEventListener("message", async e => {
 	// ---- M3U8 ---- (assistir)
 	// Obtem o link direto pelo trailer (premium) - to do
 	function getDirectStream(url, idx) {
-		setTimeout(() => request[idx].resolve(), 100);
+		setTimeout(() => request[idx].resolve(), 400);
 	}
 
 	// Obtem o link direto pelo padrão (gratis)
@@ -323,7 +323,7 @@ window.addEventListener("message", async e => {
 		res.push(buildM3u8(m3u8list));
 		for (let i in r) {
 			const idx = i;
-			setTimeout(() => request[idx].resolve(), 100);
+			setTimeout(() => request[idx].resolve(), 400);
 		}
 
 		return res;
