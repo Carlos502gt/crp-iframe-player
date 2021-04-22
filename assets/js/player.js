@@ -45,11 +45,12 @@ window.addEventListener("message", async e => {
 	// Obter streams
 	const streamlist = video_config_media['streams'];
 	for (let stream of streamlist) {
-		// Premium                                                             vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv - versões "International Dub"
+		// Premium                                                             vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv - versões "International Dub"
 		if (stream.format == 'trailer_hls' && stream.hardsub_lang == user_lang || (streamlist.length < 15 && stream.hardsub_lang === null))
 			if (rows_number <= 4) {
 				// video_m3u8_array.push(await getDirectStream(stream.url, rows_number));
-				video_mp4_array.push(getDirectFile(stream.url));
+				const arr_idx = (rows_number === 0 ? 2 : (rows_number === 2 ? 0 : rows_number));
+				video_mp4_array[arr_idx] = getDirectFile(stream.url);
 				rows_number++;
 				// mp4 + resolve temporario até pegar link direto da m3u8
 				if (rows_number > 4) {
@@ -161,15 +162,38 @@ window.addEventListener("message", async e => {
 			}
 		})
 
-		// Variaveis para los botones.
+		// Variaveis para os botões.
+		let update_iconPath = "assets/icon/update_icon.svg";
+		let update_id = "update-video-button";
+		let update_tooltipText = "Atualização Disponível";
 		let download_iconPath = "assets/icon/download_icon.svg";
 		let download_id = "download-video-button";
 		let download_tooltipText = "Download";
 		let didDownload = false;
 
+		// funcion ao clicar no botao de fechar o menu de download
+		const downloadModal = document.querySelectorAll(".modal")[0];
+		const updateModal = document.querySelectorAll(".modal")[1];
+		document.querySelectorAll("button.close-modal")[0].onclick = () =>
+			downloadModal.style.visibility = "hidden";
+		document.querySelectorAll("button.close-modal")[1].onclick = () =>
+			updateModal.style.visibility = "hidden";
+		if (user_lang[0] === 'ptBR')
+		document.getElementById('changelog').innerHTML = `<strong>Atualização disponível:</strong><br/>
+			- Add card <strong>A seguir</strong> & opções:<br/>
+				automaticamente muda para o próximo episódio<br/>
+			- Fix nome das series (ultimos eps)`;
+
 		// function ao clicar no botao de baixar
 		function download_ButtonClickAction() {
+			// Se estiver no mobile, muda um pouco o design do menu
+			if (jwplayer().getEnvironment().OS.mobile == true) {
+				downloadModal.style.height = "170px";
+				downloadModal.style.overflow = "auto";
 			}
+			
+			// Mostra o menu de download
+			downloadModal.style.visibility = downloadModal.style.visibility === "hidden" ? "visible" : "hidden";
 			
 			// Carrega os downloads
 			if (!didDownload) {
