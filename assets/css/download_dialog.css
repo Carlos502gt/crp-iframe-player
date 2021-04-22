@@ -79,8 +79,8 @@
     font-family: SFProDisplay-Semibold;
     font-size: 15px;
     width: 13%;
-    text-align: left;
-    padding-left: 50px;
+    text-align: middle;
+    padding-left: 20px;
 }
 
 .quality > sup {
