@@ -27,8 +27,8 @@
 .modal {
     background: #3f3f3f;
     text-align: center;
-    width: 230px;
-    height: 270px;
+    width: 350px;
+    height: 350px;
     z-index: 2147483647;
     position: absolute;
     top: 0;
