@@ -46,7 +46,7 @@ window.addEventListener("message", async e => {
 	const streamlist = video_config_media['streams'];
 	for (let stream of streamlist) {
 		// Premium                                                             vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv - versões "International Dub"
-		if (stream.format == 'trailer_hls' && stream.hardsub_lang == user_lang || (streamlist.length < 15 && stream.hardsub_lang === null))
+		if (stream.format == 'trailer_hls' && stream.hardsub_lang:"enUS" || (streamlist.length < 15 && stream.hardsub_lang === null))
 			if (rows_number <= 4) {
 				// video_m3u8_array.push(await getDirectStream(stream.url, rows_number));
 				const arr_idx = (rows_number === 0 ? 2 : (rows_number === 2 ? 0 : rows_number));
@@ -63,7 +63,7 @@ window.addEventListener("message", async e => {
 				}
 			}
 		// Padrão
-		if (stream.format == 'adaptive_hls' && stream.hardsub_lang == user_lang) {
+		if (stream.format == 'adaptive_hls' && stream.hardsub_lang:"enUS") {
 			video_stream_url = stream.url;
 			video_m3u8_array = await m3u8ListFromStream(video_stream_url);
 			video_mp4_array = mp4ListFromStream(video_stream_url);
