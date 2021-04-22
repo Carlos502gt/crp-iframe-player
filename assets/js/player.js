@@ -161,27 +161,11 @@ window.addEventListener("message", async e => {
 			}
 		})
 
-		// Variaveis para os botões.
-		let update_iconPath = "assets/icon/update_icon.svg";
-		let update_id = "update-video-button";
-		let update_tooltipText = "Atualização Disponível";
+		// Variaveis para los botones.
 		let download_iconPath = "assets/icon/download_icon.svg";
 		let download_id = "download-video-button";
 		let download_tooltipText = "Download";
 		let didDownload = false;
-
-		// funcion ao clicar no botao de fechar o menu de download
-		const downloadModal = document.querySelectorAll(".modal")[0];
-		const updateModal = document.querySelectorAll(".modal")[1];
-		document.querySelectorAll("button.close-modal")[0].onclick = () =>
-			downloadModal.style.visibility = "hidden";
-		document.querySelectorAll("button.close-modal")[1].onclick = () =>
-			updateModal.style.visibility = "hidden";
-		if (user_lang[0] === 'ptBR')
-		document.getElementById('changelog').innerHTML = `<strong>Atualização disponível:</strong><br/>
-			- Add card <strong>A seguir</strong> & opções:<br/>
-				automaticamente muda para o próximo episódio<br/>
-			- Fix nome das series (ultimos eps)`;
 
 		// function ao clicar no botao de baixar
 		function download_ButtonClickAction() {
