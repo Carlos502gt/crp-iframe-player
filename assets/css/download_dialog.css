@@ -57,13 +57,14 @@
 .download-item {
 	display: table;
     vertical-align: middle;
+    position: 200px;
     height: 55px;
     width: 50%;
 }
 .partdditem {
     display: table-cell;
     vertical-align: middle;
-    margin: 100%;
+    margin: 6%;
 }
 .not-copyable {
 	-webkit-touch-callout: none;
