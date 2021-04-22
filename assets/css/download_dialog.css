@@ -56,14 +56,14 @@
 }
 .download-item {
 	display: table;
-    vertical-align: 300px;
+    vertical-align: middle;
     height: 55px;
-    width: 100%;
+    width: 50%;
 }
 .partdditem {
     display: table-cell;
     vertical-align: middle;
-    margin: 300;
+    margin: 6%;
 }
 .not-copyable {
 	-webkit-touch-callout: none;
