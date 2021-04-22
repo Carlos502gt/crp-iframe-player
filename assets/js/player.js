@@ -169,14 +169,7 @@ window.addEventListener("message", async e => {
 
 		// function ao clicar no botao de baixar
 		function download_ButtonClickAction() {
-			// Se estiver no mobile, muda um pouco o design do menu
-			if (jwplayer().getEnvironment().OS.mobile == true) {
-				downloadModal.style.height = "170px";
-				downloadModal.style.overflow = "auto";
 			}
-			
-			// Mostra o menu de download
-			downloadModal.style.visibility = downloadModal.style.visibility === "hidden" ? "visible" : "hidden";
 			
 			// Carrega os downloads
 			if (!didDownload) {
