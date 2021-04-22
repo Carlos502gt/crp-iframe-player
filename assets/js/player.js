@@ -63,7 +63,7 @@ window.addEventListener("message", function (e) {
 	$.ajax({
 		async: true,
 		type: "GET",
-		url: allorigins + series_rss,
+		url: allorigins + encodeURIComponent(series_rss),
 		contentType: "text/xml; charset=utf-8",
 		complete: response => {
 			//Pega o titulo da serie
@@ -108,7 +108,7 @@ window.addEventListener("message", function (e) {
 			function addSource(url, id, needs_proxy) {
 				var fileSize = "";
 				var http = (window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP"));
-				if (needs_proxy) final_url = crproxy + url;
+				if (needs_proxy) final_url = allorigins + url;
 				else final_url = url;
 
 				http.onreadystatechange = xhr => {
@@ -210,7 +210,7 @@ window.addEventListener("message", function (e) {
 						});
 					}
 
-					Promise.all(p2).then(()=>startPlayer());
+					Promise.all(p2).then(() => startPlayer());
 				})
 			})
 
