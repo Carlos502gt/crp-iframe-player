@@ -83,14 +83,6 @@
     opacity: .7;
 }
 
-.size > img {
-    position: relative;
-    top: 4px;
-    min-width: 15px;
-    width: 15px;
-    max-width: 15px;
-}
-
 .quality {
     color: #eee;
     font-family: SFProDisplay-Semibold;
