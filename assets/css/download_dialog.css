@@ -27,8 +27,8 @@
 .modal {
     background: #3f3f3f;
     text-align: center;
-    width: 230px;
-    height: 270px;
+    width: 200px;
+    height: 200px;
     z-index: 2147483647;
     position: absolute;
     top: 0;
@@ -57,7 +57,7 @@
 .download-item {
 	display: table;
     vertical-align: middle;
-    height: 70px;
+    height: 100px;
     width: 100%;
 }
 .partdditem {
