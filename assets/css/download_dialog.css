@@ -46,7 +46,7 @@
 .close-modal {
 	background: none;
     border: none;
-    position: 200px;
+    position: 0px;
     font-size: 20px;
     cursor: pointer;
     right: 10px;
