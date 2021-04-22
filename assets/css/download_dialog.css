@@ -48,7 +48,7 @@
 .download-item {
 	display: table;
     vertical-align: middle;
-    height: 55px;
+    height: 100px;
     width: 100%;
 }
 .partdditem {
@@ -68,7 +68,7 @@
 .size {
     color: #eee;
     font-family: SFProDisplay-Regular;
-    font-size: 50px;
+    font-size: 15px;
     text-align: left;
     width: 14%;
     opacity: .7;
