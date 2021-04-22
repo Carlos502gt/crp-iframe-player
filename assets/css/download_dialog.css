@@ -58,7 +58,7 @@
 	display: table;
     vertical-align: middle;
     height: 55px;
-    width: 70%;
+    width: 80%;
 }
 .partdditem {
     display: table-cell;
@@ -80,7 +80,7 @@
     font-size: 15px;
     width: 13%;
     text-align: left;
-    padding-left: 50px;
+    padding-left: 115px;
 }
 
 .quality > sup {
