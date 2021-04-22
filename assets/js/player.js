@@ -24,7 +24,7 @@ window.addEventListener("message", async e => {
 	let up_next_enable = e.data.up_next_enable;
 	let up_next = e.data.up_next;
 	let version = e.data.version;
-	let enUS_lang = e.data.lang;
+	let user_lang = e.data.lang;
 	let series = e.data.series;
 	let episode_translate = "";
 	let video_stream_url = "";
@@ -46,7 +46,7 @@ window.addEventListener("message", async e => {
 	const streamlist = video_config_media['streams'];
 	for (let stream of streamlist) {
 		// Premium                                                             vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv - versões "International Dub"
-		if (stream.format == 'trailer_hls' && stream.hardsub_lang == enUS_lang || (streamlist.length < 15 && stream.hardsub_lang === null))
+		if (stream.format == 'trailer_hls' && stream.hardsub_lang == user_lang || (streamlist.length < 15 && stream.hardsub_lang === null))
 			if (rows_number <= 4) {
 				// video_m3u8_array.push(await getDirectStream(stream.url, rows_number));
 				const arr_idx = (rows_number === 0 ? 2 : (rows_number === 2 ? 0 : rows_number));
@@ -63,7 +63,7 @@ window.addEventListener("message", async e => {
 				}
 			}
 		// Padrão
-		if (stream.format == 'adaptive_hls' && stream.hardsub_lang == enUS_lang) {
+		if (stream.format == 'adaptive_hls' && stream.hardsub_lang == user_lang) {
 			video_stream_url = stream.url;
 			video_m3u8_array = await m3u8ListFromStream(video_stream_url);
 			video_mp4_array = mp4ListFromStream(video_stream_url);
@@ -74,8 +74,6 @@ window.addEventListener("message", async e => {
 	// Pega o numero e titulo do episodio
 	const epLangs = { "ptBR": "Episódio", "enUS": "Episode", "enGB": "Episode", "esLA": "Episodio", "esES": "Episodio", "ptPT": "Episódio", "frFR": "Épisode", "deDE": "Folge", "arME": "الحلقة", "itIT": "Episodio", "ruRU": "Серия" };
 	const fnLangs = { "ptBR": "FINAL", "enUS": "FINAL", "enGB": "FINAL", "esLA": "FINAL", "esES": "FINAL", "ptPT": "FINAL", "frFR": "FINALE", "deDE": "FINALE", "arME": "نهائي", "itIT": "FINALE", "ruRU": "ФИНАЛЬНЫЙ" };
-	episode_translate = `${epLangs[enUS_lang[0]] ? epLangs[enUS_lang[0]] : "Episode"} `;
-	final_translate   = ` (${fnLangs[enUS_lang[0]] ? fnLangs[enUS_lang[0]] : "FINAL"})`;
 
 	if (series) {
 		episode_title = series + ' - ' + episode_translate + video_config_media['metadata']['display_episode_number'];
