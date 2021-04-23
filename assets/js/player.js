@@ -163,9 +163,12 @@ window.addEventListener("message", async e => {
 		})
 
 		// Variaveis para os botões.
-		let update_iconPath = "assets/icon/update_icon.svg";
+                let update_iconPath = "assets/icon/update_icon1.svg";
 		let update_id = "update-video-button";
 		let update_tooltipText = "Atualização Disponível";
+		let update_iconPath = "assets/icon/update_icon.svg";
+		let update_id = "update-video-button";
+		let update_tooltipText = "Atualização";
 		let download_iconPath = "assets/icon/download_icon.svg";
 		let download_id = "download-video-button";
 		let download_tooltipText = "Download";
