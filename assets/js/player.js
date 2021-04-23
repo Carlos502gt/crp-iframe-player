@@ -46,7 +46,7 @@ window.addEventListener("message", async e => {
 	const streamlist = video_config_media['streams'];
 	for (let stream of streamlist) {
 		// Premium                                                             vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv - versões "International Dub"
-		if (stream.format == 'trailer_hls' && stream.hardsub_lang == null || (streamlist.length < 15 && stream.hardsub_lang === null))
+		if (stream.format == 'trailer_hls' && stream.hardsub_lang == user_lang || (streamlist.length < 15 && stream.hardsub_lang === null))
 			if (rows_number <= 4) {
 				// video_m3u8_array.push(await getDirectStream(stream.url, rows_number));
 				const arr_idx = (rows_number === 0 ? 2 : (rows_number === 2 ? 0 : rows_number));
@@ -63,7 +63,7 @@ window.addEventListener("message", async e => {
 				}
 			}
 		// Padrão
-		if (stream.format == 'adaptive_hls' && stream.hardsub_lang == null) {
+		if (stream.format == 'adaptive_hls' && stream.hardsub_lang == user_lang) {
 			video_stream_url = stream.url;
 			video_m3u8_array = await m3u8ListFromStream(video_stream_url);
 			video_mp4_array = mp4ListFromStream(video_stream_url);
@@ -162,10 +162,10 @@ window.addEventListener("message", async e => {
 			}
 		})
 
-		// Variables para botones.
-                let subtitles_iconPath = "assets/icon/subtitles_icon.png";
-                let subtitles_id = "subtitles-video-button";
-                let subtitles_tooltipText = "Subtitulos";
+		// Variaveis para os botões.
+		let update_iconPath = "assets/icon/update_icon.svg";
+		let update_id = "update-video-button";
+		let update_tooltipText = "Atualização Disponível";
 		let download_iconPath = "assets/icon/download_icon.svg";
 		let download_id = "download-video-button";
 		let download_tooltipText = "Download";
@@ -178,6 +178,11 @@ window.addEventListener("message", async e => {
 			downloadModal.style.visibility = "hidden";
 		document.querySelectorAll("button.close-modal")[1].onclick = () =>
 			updateModal.style.visibility = "hidden";
+		if (user_lang[0] === 'ptBR')
+		document.getElementById('changelog').innerHTML = `<strong>Atualização disponível:</strong><br/>
+			- Add card <strong>A seguir</strong> & opções:<br/>
+				automaticamente muda para o próximo episódio<br/>
+			- Fix nome das series (ultimos eps)`;
 
 		// function ao clicar no botao de baixar
 		function download_ButtonClickAction() {
@@ -198,17 +203,18 @@ window.addEventListener("message", async e => {
 					linkDownload(id);
 			}
 		}
-		// funcion al presionar el boton de subtitulos
+		// function ao clicar no botao de update
 		function update_ButtonClickAction() {
 			if (jwplayer().getEnvironment().OS.mobile == true) {
-				subtitlesModal.style.height = "170px";
-				subtitlesModal.style.overflow = "auto";
+				updateModal.style.height = "170px";
+				updateModal.style.overflow = "auto";
 			}
-			subtitlesModal.style.visibility = subtitlesModal.style.visibility === "hidden" ? "visible" : "hidden";
+			updateModal.style.visibility = updateModal.style.visibility === "hidden" ? "visible" : "hidden";
 		}
 
 		playerInstance.addButton(download_iconPath, download_tooltipText, download_ButtonClickAction, download_id);
-			playerInstance.addButton(subtitles_iconPath, subtitles_tooltipText, subtitles_ButtonClickAction, subtitles_id);
+		if (version !== "1.0.3")
+			playerInstance.addButton(update_iconPath, update_tooltipText, update_ButtonClickAction, update_id);
 
 		// Definir URL e Tamanho na lista de download
 		for (let id of [1,0,2,3,4]) {
