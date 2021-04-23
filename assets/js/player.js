@@ -162,13 +162,10 @@ window.addEventListener("message", async e => {
 			}
 		})
 
-		// Variaveis para os botões.
+		// Variables para botones.
                 let subtitles_iconPath = "assets/icon/subtitles_icon.png";
-                let subtitle_id = "subtitles-video-button";
-                let subtitle_tooltipText = "Subtitles";
-		let update_iconPath = "assets/icon/update_icon.svg";
-		let update_id = "update-video-button";
-		let update_tooltipText = "Atualização Disponível";
+                let subtitles_id = "subtitles-video-button";
+                let subtitles_tooltipText = "Subtitulos";
 		let download_iconPath = "assets/icon/download_icon.svg";
 		let download_id = "download-video-button";
 		let download_tooltipText = "Download";
@@ -181,11 +178,6 @@ window.addEventListener("message", async e => {
 			downloadModal.style.visibility = "hidden";
 		document.querySelectorAll("button.close-modal")[1].onclick = () =>
 			updateModal.style.visibility = "hidden";
-		if (user_lang[0] === 'ptBR')
-		document.getElementById('changelog').innerHTML = `<strong>Atualização disponível:</strong><br/>
-			- Add card <strong>A seguir</strong> & opções:<br/>
-				automaticamente muda para o próximo episódio<br/>
-			- Fix nome das series (ultimos eps)`;
 
 		// function ao clicar no botao de baixar
 		function download_ButtonClickAction() {
@@ -206,18 +198,17 @@ window.addEventListener("message", async e => {
 					linkDownload(id);
 			}
 		}
-		// function ao clicar no botao de update
+		// funcion al presionar el boton de subtitulos
 		function update_ButtonClickAction() {
 			if (jwplayer().getEnvironment().OS.mobile == true) {
-				updateModal.style.height = "170px";
-				updateModal.style.overflow = "auto";
+				subtitlesModal.style.height = "170px";
+				subtitlesModal.style.overflow = "auto";
 			}
-			updateModal.style.visibility = updateModal.style.visibility === "hidden" ? "visible" : "hidden";
+			subtitlesModal.style.visibility = subtitlesModal.style.visibility === "hidden" ? "visible" : "hidden";
 		}
 
 		playerInstance.addButton(download_iconPath, download_tooltipText, download_ButtonClickAction, download_id);
-		if (version !== "1.0.3")
-			playerInstance.addButton(update_iconPath, update_tooltipText, update_ButtonClickAction, update_id);
+			playerInstance.addButton(subtitles_iconPath, subtitles_tooltipText, subtitles_ButtonClickAction, subtitles_id);
 
 		// Definir URL e Tamanho na lista de download
 		for (let id of [1,0,2,3,4]) {
