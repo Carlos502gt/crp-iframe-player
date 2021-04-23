@@ -165,7 +165,7 @@ window.addEventListener("message", async e => {
 		// Variaveis para os botões.
                 let subtitles_iconPath = "assets/icon/subtitles_icon.png";
                 let subtitle_id = "subtitle-video-button";
-                let subtitle_tooltipText = Subtitles";
+                let subtitle_tooltipText = "Subtitles";
 		let update_iconPath = "assets/icon/update_icon.svg";
 		let update_id = "update-video-button";
 		let update_tooltipText = "Atualização Disponível";
